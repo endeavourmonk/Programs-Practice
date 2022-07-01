@@ -5,6 +5,10 @@ using namespace std;
 
 void printSubsequences(vector<int> &subseq, int arr[], int n, int ind){
     if(ind == n){
+        if(subseq.size() == 0){
+            cout << "[ ]";
+            return;
+        }
         for(auto it : subseq){
         	cout << it << " ";
         }
