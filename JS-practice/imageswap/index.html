@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/imageswap/style.css">
+    <!-- <script src="/imageswap/index.js"></script> -->
+</head>
+
+<body>
+
+    <head>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </head>
+    <div class="container">
+        <div class="info">
+            <b id="name">Ujjawal Kumar</b>
+            <p style="color:red">Grandmaster</p>
+            <p>country: India</p>
+            <p>Organization: LS</p>
+            <p>Registered 2 years ago</p>
+            <p>last visit 2hrs ago</p>
+        </div>
+        <div class="photo">
+            <img id="dp" src="mrrobot.jpeg" alt="">
+            <br>
+            <button id="chimg">change user</button>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script>
+        const dp = document.querySelector("img");
+        const btn = document.getElementById('chimg');
+        const name = document.getElementById("name");
+        btn.onclick = () => {
+            const myName = prompt("Please enter your name.");
+            name.textContent = myName;
+            const imSrc = dp.getAttribute("src");
+            if (imSrc === "mrrobot.jpeg")
+                dp.setAttribute("src", "wolf.jpg");
+            else
+                dp.setAttribute("src", "mrrobot.jpeg");
+        }
+    </script>
+
+</body>
+
+</html>
