@@ -5,7 +5,7 @@ function myFunc(n){
 }
 
 try{
-    myFunc(33);
+    myFunc(3);
 }catch(err){
     console.error("ERROR: ", err)
 }
