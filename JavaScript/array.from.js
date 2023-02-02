@@ -9,5 +9,6 @@ obj = {
 
 console.log(obj)
 
-Array.from(obj);
-console.log(typeof obj)
+let arr = Array.from(obj);
+console.log(arr);
+console.log(typeof arr);
